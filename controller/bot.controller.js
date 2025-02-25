@@ -71,7 +71,9 @@ bot.on('message', async (msg) => {
     const userId = msg.from.id;
     const text = msg.text ? msg.text.toLowerCase() : '';
 
-    if (badWords.some(word => text.includes(word))) {
+    const words = text.split(/\s+/); 
+
+    if (words.some(word => badWords.includes(word))) {
         try {
             await bot.deleteMessage(chatId, messageId);
             bot.sendMessage(chatId, `❌ <b>${msg.from.first_name}</b>, iltimos odob bilan gapiring!`, { parse_mode: "HTML" });

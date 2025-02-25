@@ -55,7 +55,11 @@ const badWords = [
     "am", "amm", "ammm", "a.m", "a*m", "а.м", "а*м", "ам", "амм", "аммм",
     
     // "skey", "ske", "sikay" varianti
-    "skey", "ske", "sikay", "skay", "s.k.e.y", "s.k.e", "s*kay", "sk*ey", "ски", "скай", "с.кай", "с*кай"
+    "skey", "ske", "sikay", "skay", "s.k.e.y", "s.k.e", "s*kay", "sk*ey", "ски", "скай", "с.кай", "с*кай",
+    
+    // "jalab" varianti
+    "jalab", "jalabb", "j.a.l.a.b", "j*alab", "ja.lab", "jaalab", "jaalabb", 
+    "жалаб", "жалап", "ж.а.л.а.б", "ж*алаб", "жа.лаб", "жаалаб", "жаалабб"
 ];
 
 bot.onText(/\/start/, (msg) => {

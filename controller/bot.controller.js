@@ -60,7 +60,7 @@ const badWords = [
 
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id
-    bot.sendMessage(chatId, `Assalomu aleykum. Bu botni siz kanalingizga admin qilib qo'yish bilan kanalingizdagi so'kinishlarni oldini olgan holda odob bilan muloqot qilishini taminlashingiz mumkin agarda biron bir so'kinishlar ban bo'lmay qolayotgan bo'lsa shu bo'tga shunchaki xabar yozing va adminlar bu so'zni ham qo'shib qoyadi`)
+    bot.sendMessage(chatId, `Assalomu aleykum. Bu botni siz guruhingizga admin qilib qo'yish bilan guruhingizdagi so'kinishlarni oldini olgan holda odob bilan muloqot qilishini taminlashingiz mumkin.`)
 }) 
 
 
@@ -73,7 +73,6 @@ bot.on('message', async (msg) => {
 
     if (badWords.some(word => text.includes(word))) {
         try {
-            // Xabarni o‘chirish
             await bot.deleteMessage(chatId, messageId);
             bot.sendMessage(chatId, `❌ <b>${msg.from.first_name}</b>, iltimos odob bilan gapiring!`, { parse_mode: "HTML" });
         } catch (error) {
